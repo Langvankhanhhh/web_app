@@ -20,7 +20,6 @@ namespace webtinhdientich
             double a, b, h;
             string errorMessage = "";
 
-            // Kiểm tra và chuyển đổi giá trị nhập vào từ người dùng
             if (!double.TryParse(txtA.Text, out a) || a <= 0)
             {
                 errorMessage += "Đáy lớn (a) phải là số dương. ";
@@ -34,14 +33,12 @@ namespace webtinhdientich
                 errorMessage += "Chiều cao (h) phải là số dương. ";
             }
 
-            // Nếu có lỗi, hiển thị thông báo lỗi
             if (errorMessage != "")
             {
                 lblResult.Text = "Lỗi: " + errorMessage;
             }
             else
             {
-                // Tính diện tích hình thang sử dụng thư viện libHinhthang
                 double area = dientichthang.dientich(a, b, h);
                 lblResult.Text = $"Diện tích hình thang là: {area}";
             }
