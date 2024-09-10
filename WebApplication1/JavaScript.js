@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     function sendData() {
         var nho = $('#txtA').val();
-        var lon = $('#txtA').val();
+        var lon = $('#txtB').val();
         var cao = $('#txtH').val();
 
         if (isNaN(nho) || isNaN(lon) || isNaN(cao)) {
